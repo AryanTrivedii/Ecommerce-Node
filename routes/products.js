@@ -7,4 +7,7 @@ router.post('/addproduct', upload.single('image'),Product.createProduct)
 router.get('/all',Product.getProducts)
 router.get('/single/:id',Product.getSingle)
 
+router.delete('/delproduct/:id',Product.deleteProduct)
+router.put('/updateproducr/:id',upload.single('image'),Product.updateProduct)
+
 module.exports=router
